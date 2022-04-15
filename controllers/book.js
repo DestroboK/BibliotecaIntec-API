@@ -84,8 +84,6 @@ const getLibro = async (req, res = response)=>{
     try{
 
         let libro = await Libro.findById(_id);
-        console.log(_id);
-        console.log(libro)
         if(!libro ) {
         return res.status(400).json({
             ok: false,
